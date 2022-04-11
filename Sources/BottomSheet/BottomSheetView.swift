@@ -173,7 +173,8 @@ internal struct BottomSheetView<hContent: View, mContent: View, bottomSheetPosit
                             }
                         }
                         .transition(.move(edge: .bottom))
-                        .padding(.bottom, geometry.safeAreaInsets.bottom)
+                        // removing the padding so that views pinned to the bottom don't have too much space above the safe area
+                        // .padding(.bottom, geometry.safeAreaInsets.bottom)
                     } else {
                         Color.clear
                     }
